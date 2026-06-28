@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- This meta tag makes the page scale correctly on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Weather App</h1>
+
+    <!-- SEARCH: user types a city, then clicks the button (or presses Enter) -->
+    <div class="search">
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <!-- ERROR: hidden by default, shown when a city isn't found -->
+    <p id="error-message" class="error hidden"></p>
+
+    <!-- CURRENT WEATHER: hidden until we have data to show -->
+    <section id="weather-card" class="weather-card hidden">
+      <p id="datetime" class="datetime"></p>
+      <h2 id="city-name"></h2>
+
+      <div class="weather-main">
+        <img id="weather-icon" src="" alt="weather icon" />
+        <p id="temperature" class="temperature"></p>
+      </div>
+
+      <p id="description" class="description"></p>
+
+      <div class="details">
+        <div class="detail">
+          <span class="label">Humidity</span>
+          <span id="humidity" class="value"></span>
+        </div>
+        <div class="detail">
+          <span class="label">Wind</span>
+          <span id="wind-speed" class="value"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-DAY FORECAST: we'll fill this with JS in step 5 -->
+    <section id="forecast" class="forecast hidden"></section>
+  </main>
+
+  <!-- Load the script at the end so the HTML exists before JS runs -->
+  <script src="script.js"></script>
+</body>
+</html>
